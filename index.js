@@ -15,15 +15,7 @@ const mongoose = require('./config/mongoose');
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.use(
-  sassMiddleware({
-    src: __dirname + '/assets/scss', // Adjust the path to your SCSS files
-    dest: __dirname + '/assets/css', // Adjust the path to your CSS files
-    debug: false,
-    outputStyle: 'extended',
-    prefix: '/css',
-  })
-);
+
 
 // Serve static files from the 'assets' directory
 app.use(express.static(__dirname + '/assets'));
